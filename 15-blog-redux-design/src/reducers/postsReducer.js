@@ -1,3 +1,10 @@
 export default () => {
-  return [];
+  // bad !
+  return document.querySelector("input");
+
+  // bad
+  return Axios.get("/posts");
+
+  // good
+  return state + action;
 };
