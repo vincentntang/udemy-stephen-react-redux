@@ -1,10 +1,8 @@
-export default () => {
-  // bad !
-  return document.querySelector("input");
-
-  // bad
-  return Axios.get("/posts");
-
-  // good
-  return state + action;
+export default (state =[], action) => {
+  switch(action.type){
+    case 'FETCH_POSTS':
+      return action.payload;
+    default:
+      return state;
+  }
 };
